@@ -1,41 +1,42 @@
+// Import React and the components you need
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Navbar as BootstrapNavbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-function Navbar() {
+// Define your custom Navbar component
+const CustomNavbar = () => {
   return (
-    <div className="Navbar">
-      <BootstrapNavbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="/">Animal Gallery</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <NavLink to="/" className="nav-link" activeClassName="active">
-                Dogs
-              </NavLink>
-              <NavLink to="/cats" className="nav-link" activeClassName="active">
-                Cats
-              </NavLink>
-              <NavLink
-                to="/sheeps"
-                className="nav-link"
-                activeClassName="active"
-              >
-                Sheeps
-              </NavLink>
-              <NavLink
-                to="/goats"
-                className="nav-link"
-                activeClassName="active"
-              >
-                Goats
-              </NavLink>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-        </BootstrapNavbar>
-    </div>
+    // Use the Navbar component from react-bootstrap
+    <Navbar bg="light" expand="lg">
+      <Container>
+        {/* Use the Navbar.Brand component to display the logo or title */}
+        <Navbar.Brand href="/">CAPEX Gallery</Navbar.Brand>
+        
+        {/* Use the Navbar.Toggle component to show the collapse button */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/* Use the Navbar.Collapse component to wrap the navigation links */}
+        <Navbar.Collapse id="basic-navbar-nav">
+          {/* Use the Nav component to display the links */}
+          <Nav className="me-auto">
+            {/* Use the NavLink component from react-router-dom to navigate between routes */}
+            <NavLink to="/Items" className="nav-link" activeClassName="active">
+              Items
+            </NavLink>
+            <NavLink to="/Profile" className="nav-link" activeClassName="active">
+              Profile
+            </NavLink>
+            <NavLink to="/Reservations" className="nav-link" activeClassName="active">
+              Reservations
+            </NavLink>
+            <NavLink to="/Login" className="nav-link" activeClassName="active">
+              Login
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-}
-export default Navbar;
+};
+
+// Export your custom Navbar component as default
+export default CustomNavbar;
