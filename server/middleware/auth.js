@@ -1,6 +1,6 @@
-const jwt = require("jwt");
+// const jwt = require("jwt");
 // auth.js file
-const jwt = require("jwt");
+const jwt = require("jsonwebtoken");
 
 // Define and export the middleware function
 module.exports = function (req, res, next) {
