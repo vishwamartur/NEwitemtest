@@ -38,7 +38,7 @@ app.use(reservationRoutes);
 app.use(userRoutes);
 
 // Get the port from the environment variables or use 5000 as default
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // Start the server
 app.listen(port, () => {

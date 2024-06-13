@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { Button } from "react-bootstrap";
 import { Table } from "react-bootstrap";
+
 function Items() {
   // Use the useFetch hook to fetch the items data from the /items endpoint
   const { data: items, loading, error } = useFetch("/items");

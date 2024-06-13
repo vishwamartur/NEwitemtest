@@ -11,7 +11,6 @@ const CustomNavbar = () => {
       <Container>
         {/* Use the Navbar.Brand component to display the logo or title */}
         <Navbar.Brand href="/">CAPEX Gallery</Navbar.Brand>
-        
         {/* Use the Navbar.Toggle component to show the collapse button */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         {/* Use the Navbar.Collapse component to wrap the navigation links */}
@@ -22,10 +21,18 @@ const CustomNavbar = () => {
             <NavLink to="/Items" className="nav-link" activeClassName="active">
               Items
             </NavLink>
-            <NavLink to="/Profile" className="nav-link" activeClassName="active">
+            <NavLink
+              to="/Profile"
+              className="nav-link"
+              activeClassName="active"
+            >
               Profile
             </NavLink>
-            <NavLink to="/Reservations" className="nav-link" activeClassName="active">
+            <NavLink
+              to="/Reservations"
+              className="nav-link"
+              activeClassName="active"
+            >
               Reservations
             </NavLink>
             <NavLink to="/Login" className="nav-link" activeClassName="active">
