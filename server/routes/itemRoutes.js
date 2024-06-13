@@ -1,12 +1,12 @@
 // Import express and router
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // Import the item model
-const Item = require('../models/item');
+const Item = require("../models/item");
 
 // Define the GET route for /items
-router.get('/items', async (req, res) => {
+router.get("/items", async (req, res) => {
   try {
     // Find all the items from the database
     const items = await Item.find();

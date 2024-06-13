@@ -1,13 +1,13 @@
-const dotenv = require("dotenv");
-# .env file
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=123456
-PORT=3000
-// env.js file
-const dotenv = require("dotenv");
-const result = dotenv.config();
-if (result.error) {
-  throw result.error;
-}
-module.exports = process.env;
+const MongoClient = require("mongodb").MongoClient;
+const url = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.PORT}`;
+MongoClient.connect(url, function (err, client) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Connected to MongoDB");
+    const db = client.db();
+    // Use the database
+    const collection = db.collection("mycollection");
+    // Perform CRUD operations on the collection
+  }
+});
