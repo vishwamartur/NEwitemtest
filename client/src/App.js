@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Reservations from "./pages/Reservations";
 import Navbar from "./components/Navbar";
+import Register from "./pages/Register";
+
 function App() {
   // Return a JSX element that wraps the BrowserRouter component around the Switch and Route components
   return (
@@ -18,9 +20,11 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/profile" component={Profile} />
           <Route path="/reservations" component={Reservations} />
+          <Route path="/register" component={Register} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
 export default App;
